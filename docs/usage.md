@@ -5,7 +5,7 @@
 
 FortiSOAR's new **Threat Intel Management** Solution Pack brings Security Orchestration and Automated Response (SOAR) and Threat Intel Management (TIM) worlds closer by introducing advanced Threat Intel Management capabilities within the SOAR platform. The following video demonstrates how this integration greatly simplifies investigations by bringing in contextual threat intel.
 
-| [![](./docs/res/threat-intelligence-youtube-thumbnail.png)](https://www.youtube.com/watch?v=vTvtHQxniVU) |
+| [![](./res/threat-intelligence-youtube-thumbnail.png)](https://www.youtube.com/watch?v=vTvtHQxniVU) |
 |:--------------------------------------------------------------------------------------------------------:|
 |             [FortiSOAR Threat Intel Management](https://www.youtube.com/watch?v=vTvtHQxniVU)             |
 
@@ -116,6 +116,7 @@ Now, for this phishing alert, the team needs to get more intelligence around the
 Clicking  **Raise Priority Intelligence Requirement Request (PIR)**  displays a  **Raise Priority Intelligence Requirement Request (PIR)**  popup, in which you can specify the details of the PIR and then click **Submit PIR Request To Threat Intel Team**. This in turn submits the PIR to the threat intelligence team and they create the required workspace such as 'Investigatecovidreporting.com'. Next, the threat intelligence team can start investigating the URL, finding related IPs, running whois analysis, etc., and then add all the relevant items and send this information back to the *Firewall* team, which starts the feedback loop and dialog between teams, making detection and prevention more effective.
 
 ### Feed Configurations
+
 On the **Feed Configurations** > **General** tab, you can configure the feed confidence threshold to automatically update the matching indicator record reputation. In this case, the reputation of an indicator that has a matching feed gets automatically updated with the reputation of the feed, provided the confidence of the feed is equal or above to the value specified in the Selected Feed Confidence Threshold field (70% in our example):  
 
 ![Feed Configurations - General tab](res/general.png)
@@ -128,12 +129,16 @@ As soon as you enable the TAXII server, the following details appear under **TAX
 
 **Server address**: Contains a TAXII server address for the clients to connect, and eventually process.
 
-**Authentication method**: The authentication method that clients may use to connect. They may use the URL for authentication, as demonstrated in the example.
+**Server Discovery Address**: A discovery endpoint that helps clients to get information about a TAXII Server.
+
+**Authentication method**: The authentication method that clients may use to connect. They may use the URL for authentication, as demonstrated in the example. Additionally, clients can use API Key authentication.
 
 **Available Endpoints**: There are 4 endpoints available. Append these to the end of a TAXII server address to get the mentioned result:
 
 | Path                               | Purpose                                 |
 |:-----------------------------------|:----------------------------------------|
+| `/api/taxii/1/`                    | API Server address                      |
+| `/api/taxii/1/taxii`               | API Server discovery endpoint           |
 | `api/taxii/1/collections`          | list all available datasets             |
 | `api/taxii/1/collections/`         | get details of any dataset              |
 | `api/taxii/1/collections/objects`  | list threat feeds in a dataset          |
