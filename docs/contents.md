@@ -141,6 +141,23 @@ Following is the module schema of the **Threat Intel Reports** module
 | `relatedATTCKSubTechniques` | `manyToMany`          |
 | `relatedMalware`            | `manyToMany`          |
 
+### Hunts
+Following is the module schema of the **Tasks** module
+
+| Field              | Field Type   |
+|--------------------|--------------|
+| `alerts`           | `manyToMany` |
+| `comments`         | `manyToMany` |
+| `communications`   | `manyToMany` |
+| `huntEnd`          | `datetime`   |
+| `huntStart `       | `datetime`   |
+| `indicators`       | `manyToMany` |
+| `name`             | `text`       |
+| `siems`            | `picklist`   |
+| `tasks   `         | `manyToMany` |
+| `timeCreated`      | `datetime`   |
+
+
 ## System View
 
 | System View          | Description                                                                                                    |
@@ -183,8 +200,8 @@ Following is the module schema of the **Threat Intel Reports** module
 | Manage Datasets             | Manage and Create datasets                                                   |
 | Access Control              | Change which teams or users have access to records                           |
 | Feed Configuration Settings | Configures feeds to be consumed by modules                                   |
-| Threat Intel Management Configuration | Configures feeds to be consumed by modules                         |
-| TAXII Server Configuration  | Configures feeds to be consumed by modules                                   |
+| Threat Intel Management Configuration | Configures the TIM                                                 |
+| TAXII Server Configuration  | Configures TAXII Server                                                      |
 
 
 ## Playbook Collection
