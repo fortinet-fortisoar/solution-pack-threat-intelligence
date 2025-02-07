@@ -189,6 +189,9 @@ Following is the module schema of the **Tasks** module
 | File Content Extraction                 | File Content Extraction is a FortiSOAR™ utility to extract text, artifacts, and metadata from almost any file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | MITRE ATT&CK                            | This MITRE ATT&CK connector helps to import MITRE ATT&CK techniques from the static data available within the connector and adds the data to FortiSOAR in MITRE ATT&CK Techniques module. This import procedure helps in replicating the knowledge base of adversary tactics and techniques based on real-world observations.                                                                                                                                                                                                                                                           |
 | CISA Advisory                           | CISA Advisory connector fetches the Advisory and Known Exploited Vulnerability (KEV) CVE published by CISA.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| File Content                            | File Content Extraction is a FortiSOAR™ utility to extract text, artifacts, and metadata from almost any file.|  
+| MITRE ATT&CK                            | This MITRE ATT&CK connector helps to import MITRE ATT&CK techniques from the static data available within the connector and adds the data to FortiSOAR in MITRE ATT&CK Techniques module. This import procedure helps in replicating the knowledge base of adversary tactics and techniques based on real-world observations.|   
+
 
 ## Widgets
 
@@ -235,6 +238,7 @@ Following is the module schema of the **Tasks** module
 | Action - IPv6 Addresses - Block Threat Feeds | Blocks indicators of type 'IP Addresses on the firewall                         |
 | Action - Filehashes - Block Threat Feeds     | Blocks indicators of type 'Email Addresses' on the firewall                     |
 | Action - Block Threat Feeds (Type All)       | Blocks all types of feeds on the firewall                                       |
+
 
 ## Report
 
